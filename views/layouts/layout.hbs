@@ -205,6 +205,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    {{!--
     <script>
         // Chờ 2 giây rồi mở tab Shopee
         setTimeout(function () {
@@ -213,7 +214,34 @@
                 '_blank'
             );
         }, 2000);
+    </script> --}}
+
+    <script>
+        const shopeeWebURL =
+            'https://shopee.vn/-Beplain-Ch%C3%ADnh-H%C3%A3ng-Kem-ch%E1%BB%91ng-n%E1%BA%AFng-BEPLAIN-Sunmuse-Mineral-v%E1%BA%ADt-l%C3%BD-n%C3%A2ng-tone-nh%E1%BA%B9-nh%C3%A0ng-SPF-50-PA-50ml-i.468195803.23372200219';
+
+        const shopeeDeepLink =
+            'shopee://open?url=' + encodeURIComponent(shopeeWebURL);
+
+        // Detect mobile
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        setTimeout(function () {
+            if (isMobile) {
+                // Thử mở app Shopee
+                window.location.href = shopeeDeepLink;
+
+                // Nếu app không mở → fallback về web sau 1.5s
+                setTimeout(() => {
+                    window.location.href = shopeeWebURL;
+                }, 1500);
+            } else {
+                // Desktop chỉ mở web
+                window.open(shopeeWebURL, '_blank');
+            }
+        }, 1200);
     </script>
+
 
 </body>
 
