@@ -1,10 +1,16 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "123456",
-    "database": "eshopdb",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "ptudwprojectdb",
+    "password": "4uRD8oWcLKx0rKPf75OIE7psg73Z7mtT",
+    "database": "ptudwprojectdb_6vpt",
+    "host": "dpg-d4dtgenpm1nc73f2p2bg-a.oregon-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "postgres",
@@ -14,10 +20,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "username",
-    "password": "password",
-    "database": "databasee",
-    "host": "host",
+    "username": "ptudwprojectdb",
+    "password": "4uRD8oWcLKx0rKPf75OIE7psg73Z7mtT",
+    "database": "ptudwprojectdb_6vpt",
+    "host": "dpg-d4dtgenpm1nc73f2p2bg-a.oregon-postgres.render.com",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
